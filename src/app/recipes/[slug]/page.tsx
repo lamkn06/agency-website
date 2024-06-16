@@ -8,6 +8,7 @@ import PinterestIcon from '@mui/icons-material/Pinterest';
 import StarIcon from '@mui/icons-material/Star';
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import { Box, Grid, Typography } from '@mui/material';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
@@ -17,7 +18,6 @@ import { SectionListCake } from '../../../shared/components/ui/SectionListCake';
 import { listRecipes } from '../constant';
 import { dataRecipesDetailType } from './constant';
 import { ShowImage } from './ShowImage';
-import { Metadata } from 'next';
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const {
