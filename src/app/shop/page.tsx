@@ -9,7 +9,7 @@ export const metadata = {
   description: 'Shop description',
 };
 
-export const Page = () => {
+const Page = () => {
   return (
     <Box pt={{ sm: '75px', lg: '125px' }}>
       <SectionListCake

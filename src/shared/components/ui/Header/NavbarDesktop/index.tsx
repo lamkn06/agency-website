@@ -8,7 +8,7 @@ import { dataNavbar, listIconNavbar, SubNavType } from '../constant';
 
 export const NavbarDesktop = () => {
   const pathname = usePathname();
-
+  const current = dataNavbar.find((item) => pathname.split('/').includes(item.id));
   return (
     <Box
       sx={{
@@ -76,9 +76,9 @@ export const NavbarDesktop = () => {
               display={'flex'}
               alignItems={'center'}
             >
-              {dataNavbar
-                .find((item) => pathname.split('/').includes(item.id))
-                ?.subNav.map((sub) => (
+              {current &&
+                current.subNav &&
+                current.subNav.map((sub) => (
                   <Typography
                     key={sub.id}
                     py={'18px'}
